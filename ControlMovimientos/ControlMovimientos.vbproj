@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6157F343-A3FD-4560-8CC8-95FCDB24F7F2}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>ARRWS04I.ICO</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyName>ControlMovimientos</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>On</OptionStrict>
+    <RootNamespace>ControlMovimientos</RootNamespace>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ControlMovimientos.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ControlMovimientos.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="ActaCierreClasses, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ActaCierreClasses.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.MSCommLib, Version=1.1.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AxInterop.MSCommLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Bascula, Version=2.2.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Bascula.dll</HintPath>
+    </Reference>
+    <Reference Include="CapturaEfectivo, Version=1.0.5577.30657, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CapturaEfectivo.dll</HintPath>
+    </Reference>
+    <Reference Include="Catalogo, Version=1.0.5711.28730, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Catalogo.dll</HintPath>
+    </Reference>
+    <Reference Include="ClienteZonaEconomica, Version=1.0.4960.33438, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ClienteZonaEconomica.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlesBase, Version=1.1.5711.28961, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ControlesBase.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>bin\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>bin\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>bin\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>bin\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>bin\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="ExportarAExcel, Version=1.0.5716.19928, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ExportarAExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="GasMetropolitano2002.Runtime, Version=1.0.4413.28449, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GasMetropolitano2002.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="GuardarArchivos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GuardarArchivos.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSCommLib, Version=1.1.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Interop.MSCommLib.dll</HintPath>
+    </Reference>
+    <Reference Include="LeerPesoBascula, Version=1.0.6137.19340, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\LeerPesoBascula.dll</HintPath>
+    </Reference>
+    <Reference Include="LiquidacionPortatil, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\LiquidacionPortatil.dll</HintPath>
+    </Reference>
+    <Reference Include="MedicionFisica, Version=1.8.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MedicionFisica.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MobileGas, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MobileGas.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\office.dll</HintPath>
+    </Reference>
+    <Reference Include="PortatilClasses, Version=1.7.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\PortatilClasses.dll</HintPath>
+    </Reference>
+    <Reference Include="ReporteDinamico, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ReporteDinamico.dll</HintPath>
+    </Reference>
+    <Reference Include="ReporteDinamicoOaxaca, Version=1.0.6134.16193, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ReporteDinamicoOaxaca.dll</HintPath>
+    </Reference>
+    <Reference Include="Resguardo, Version=1.0.5715.17858, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Resguardo.dll</HintPath>
+    </Reference>
+    <Reference Include="SigaMetClasses, Version=2.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SigaMetClasses.dll</HintPath>
+    </Reference>
+    <Reference Include="SIGAMETSecurity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SIGAMETSecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="SigametSeguridad, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SigametSeguridad.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmCancelacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCargaCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaDucto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaEmbarque.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDucto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmbarque.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmbarqueCosto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmbarqueTraspaso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEntradaPorCalibracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExistencias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFolioBascula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportarVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKilometraje.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKilometrajes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMedicionPCFlujo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientoAlmacen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientoAlmacenBusqueda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientoAutoCarburacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientoAutoConsumo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientoDevolucionEntrada.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientoInicial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientoResguardoEntrada.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientoResguardoSalida.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientoTraslado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientoTrasladoCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientoTrasladoVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProgramaCompraVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReposicionFugas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReposicionFugasPortatil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrasiegoSalida.Designer.vb">
+      <DependentUpon>frmTrasiegoSalida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrasiegoSalida.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Globals.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Content Include="ARRWS04I.ICO" />
+    <EmbeddedResource Include="frmCancelacion.resx">
+      <DependentUpon>frmCancelacion.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCargaCliente.resx">
+      <DependentUpon>frmCargaCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaDucto.resx">
+      <DependentUpon>frmConsultaDucto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaEmbarque.resx">
+      <DependentUpon>frmConsultaEmbarque.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDucto.resx">
+      <DependentUpon>frmDucto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmbarque.resx">
+      <DependentUpon>frmEmbarque.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmbarqueCosto.resx">
+      <DependentUpon>frmEmbarqueCosto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmbarqueTraspaso.resx">
+      <DependentUpon>frmEmbarqueTraspaso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEntradaPorCalibracion.resx">
+      <DependentUpon>frmEntradaPorCalibracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExistencias.resx">
+      <DependentUpon>frmExistencias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFolioBascula.resx">
+      <DependentUpon>frmFolioBascula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportarVentas.resx">
+      <DependentUpon>frmImportarVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKilometraje.resx">
+      <DependentUpon>frmKilometraje.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKilometrajes.resx">
+      <DependentUpon>frmKilometrajes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMedicionPCFlujo.resx">
+      <DependentUpon>frmMedicionPCFlujo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientoAlmacen.resx">
+      <DependentUpon>frmMovimientoAlmacen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientoAlmacenBusqueda.resx">
+      <DependentUpon>frmMovimientoAlmacenBusqueda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientoAutoCarburacion.resx">
+      <DependentUpon>frmMovimientoAutoCarburacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientoAutoConsumo.resx">
+      <DependentUpon>frmMovimientoAutoConsumo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientoDevolucionEntrada.resx">
+      <DependentUpon>frmMovimientoDevolucionEntrada.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientoInicial.resx">
+      <DependentUpon>frmMovimientoInicial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientoResguardoEntrada.resx">
+      <DependentUpon>frmMovimientoResguardoEntrada.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientoResguardoSalida.resx">
+      <DependentUpon>frmMovimientoResguardoSalida.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos.resx">
+      <DependentUpon>frmMovimientos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientoTraslado.resx">
+      <DependentUpon>frmMovimientoTraslado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientoTrasladoCompra.resx">
+      <DependentUpon>frmMovimientoTrasladoCompra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientoTrasladoVenta.resx">
+      <DependentUpon>frmMovimientoTrasladoVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProgramaCompraVenta.resx">
+      <DependentUpon>frmProgramaCompraVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReposicionFugas.resx">
+      <DependentUpon>frmReposicionFugas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReposicionFugasPortatil.resx">
+      <DependentUpon>frmReposicionFugasPortatil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrasiegoSalida.resx">
+      <DependentUpon>frmTrasiegoSalida.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>
