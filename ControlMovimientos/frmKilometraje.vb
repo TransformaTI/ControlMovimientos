@@ -324,7 +324,16 @@ Public Class frmKilometraje
             Opcion = 3
         End If
         Dim oCamion As New PortatilClasses.Consulta.cCamionKilometraje(Opcion)
-        oCamion.CargarDatos(CType(txtCamion.Text, Integer))
+
+        Dim oConfig As New SigaMetClasses.cConfig(GLOBAL_Modulo, CShort(GLOBAL_Empresa), GLOBAL_Sucursal)
+        Dim strURLGateway As String = CType(oConfig.Parametros("URLGateway"), String).Trim
+
+        If strURLGateway = "" Then
+            oCamion.CargarDatos(CType(txtCamion.Text, Integer))
+        Else
+            oCamion.CargarDatos(CType(txtCamion.Text, Integer), strURLGateway)
+        End If
+
         If oCamion.Identificador = 0 Then
             ActiveControl = txtCamion
             Dim Mensajes As New PortatilClasses.Mensaje(97, txtCamion.Text)
