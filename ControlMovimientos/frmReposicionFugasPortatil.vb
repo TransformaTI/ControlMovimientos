@@ -721,7 +721,15 @@ Public Class frmReposicionFugasPortatil
     Private Sub BuscarCliente()
         Cursor = Cursors.WaitCursor
         Dim oCliente As New PortatilClasses.Consulta.cCliente(0, CType(txtCliente.Text, Integer))
-        oCliente.CargaDatos()
+        Dim oConfig As New SigaMetClasses.cConfig(GLOBAL_Modulo, CShort(GLOBAL_Empresa), GLOBAL_Sucursal)
+
+        Dim strURLGateway As String = CType(oConfig.Parametros("URLGateway"), String).Trim
+
+        If String.IsNullOrEmpty(strURLGateway) Then
+            oCliente.CargaDatos()
+        Else
+            oCliente.CargaDatos(strURLGateway)
+        End If
 
         If oCliente.Cliente <> "" Then
             lblCliente.Text = oCliente.Cliente
