@@ -88,3 +88,8 @@ C:\Users\Iván Trujillo\Documents\Proyectos\Control de Movimientos\ControlMovimi
 C:\Users\Iván Trujillo\Documents\Proyectos\Control de Movimientos\ControlMovimientos\obj\Debug\ControlMovimientos.exe
 C:\Users\Iván Trujillo\Documents\Proyectos\Control de Movimientos\ControlMovimientos\obj\Debug\ControlMovimientos.xml
 C:\Users\Iván Trujillo\Documents\Proyectos\Control de Movimientos\ControlMovimientos\obj\Debug\ControlMovimientos.pdb
+C:\Users\Iván Trujillo\Documents\Proyectos\Control de Movimientos\ControlMovimientos\bin\log4net.dll
+C:\Users\Iván Trujillo\Documents\Proyectos\Control de Movimientos\ControlMovimientos\bin\log4net.xml
+C:\Users\Iván Trujillo\Documents\Proyectos\Control de Movimientos\ControlMovimientos\bin\RTGMGateway.dll
+C:\Users\Iván Trujillo\Documents\Proyectos\Control de Movimientos\ControlMovimientos\bin\RTGMGateway.pdb
+C:\Users\Iván Trujillo\Documents\Proyectos\Control de Movimientos\ControlMovimientos\bin\RTGMGateway.dll.config
