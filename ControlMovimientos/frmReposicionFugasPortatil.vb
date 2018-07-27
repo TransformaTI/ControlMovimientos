@@ -720,29 +720,43 @@ Public Class frmReposicionFugasPortatil
     ' Busca al cliente por medio del numero de cliente
     Private Sub BuscarCliente()
         Cursor = Cursors.WaitCursor
-        Dim oCliente As New PortatilClasses.Consulta.cCliente(0, CType(txtCliente.Text, Integer))
-        Dim oConfig As New SigaMetClasses.cConfig(GLOBAL_Modulo, CShort(GLOBAL_Empresa), GLOBAL_Sucursal)
+        Dim oCliente As PortatilClasses.Consulta.cCliente
 
-        Dim strURLGateway As String = CType(oConfig.Parametros("URLGateway"), String).Trim
+        Try
+            Dim corporativo As Integer = CInt(cboCorporativo.SelectedValue)
 
-        If String.IsNullOrEmpty(strURLGateway) Then
-            oCliente.CargaDatos()
-        Else
-            oCliente.CargaDatos(strURLGateway)
-        End If
+            oCliente = New PortatilClasses.Consulta.cCliente(0, CType(txtCliente.Text, Integer), corporativo)
+            Dim oConfig As New SigaMetClasses.cConfig(GLOBAL_Modulo, CShort(GLOBAL_Empresa), GLOBAL_Sucursal)
+            Dim strURLGateway As String = CType(oConfig.Parametros("URLGateway"), String).Trim
 
-        If oCliente.Cliente <> "" Then
-            lblCliente.Text = oCliente.Cliente
-            HabilitarAceptar()
-        Else
-            LimpiarCliente()
-            Dim Mensajes As New PortatilClasses.Mensaje(3)
-            MessageBox.Show(Mensajes.Mensaje, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ActiveControl = txtCliente
-            txtCliente.Clear()
-        End If
-        oCliente = Nothing
-        Cursor = Cursors.Default
+            If String.IsNullOrEmpty(strURLGateway) Then
+                oCliente.CargaDatos()
+            Else
+                ' Se requiere el corporativo para consultar al web service
+                If corporativo <= 0 Then
+                    Dim Mensajes As New PortatilClasses.Mensaje(12)
+                    Throw New Exception(Mensajes.Mensaje)
+                End If
+
+                oCliente.CargaDatos(strURLGateway)
+            End If
+
+            If oCliente.Cliente <> "" Then
+                lblCliente.Text = oCliente.Cliente
+                HabilitarAceptar()
+            Else
+                LimpiarCliente()
+                Dim Mensajes As New PortatilClasses.Mensaje(3)
+                MessageBox.Show(Mensajes.Mensaje, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                ActiveControl = txtCliente
+                txtCliente.Clear()
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Reposición de fugas a rutas portátiles", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            oCliente = Nothing
+            Cursor = Cursors.Default
+        End Try
     End Sub
 
     Private Sub CargarDatosAlmacen()
