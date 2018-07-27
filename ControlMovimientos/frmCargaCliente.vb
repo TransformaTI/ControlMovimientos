@@ -1032,7 +1032,7 @@ Public Class frmCargaCliente
 
     ' Busca al cliente por medio del numero de cliente
     Private Sub BuscarCliente()
-        Dim oCliente As New PortatilClasses.Consulta.cCliente(0, CType(txtCliente.Text, Integer))
+        Dim oCliente As New PortatilClasses.Consulta.cCliente(0, CType(txtCliente.Text, Integer), 0)
         oCliente.CargaDatos()
 
         Cursor = Cursors.WaitCursor
