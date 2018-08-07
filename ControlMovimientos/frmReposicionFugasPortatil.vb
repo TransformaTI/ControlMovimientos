@@ -738,7 +738,7 @@ Public Class frmReposicionFugasPortatil
                     Throw New Exception(Mensajes.Mensaje)
                 End If
 
-                oCliente.CargaDatos(strURLGateway)
+                oCliente.CargaDatos(strURLGateway, Byte.Parse(GLOBAL_Modulo.ToString()), SigaMetClasses.DataLayer.Conexion.ConnectionString, GLOBAL_Empresa)
             End If
 
             If oCliente.Cliente <> "" Then
