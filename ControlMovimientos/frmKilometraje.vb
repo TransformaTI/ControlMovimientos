@@ -331,7 +331,7 @@ Public Class frmKilometraje
         If strURLGateway = "" Then
             oCamion.CargarDatos(CType(txtCamion.Text, Integer))
         Else
-            oCamion.CargarDatos(CType(txtCamion.Text, Integer), strURLGateway)
+            oCamion.CargarDatos(CType(txtCamion.Text, Integer), strURLGateway, CByte(GLOBAL_Modulo))
         End If
 
         If oCamion.Identificador = 0 Then
