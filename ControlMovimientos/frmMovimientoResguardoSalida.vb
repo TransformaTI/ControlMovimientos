@@ -552,7 +552,7 @@ Public Class frmMovimientoResguardoSalida
         If strURLGateway = "" Then
             oCliente.CargaDatos()
         Else
-            oCliente.CargaDatos(strURLGateway, CByte(GLOBAL_Modulo.ToString()), SigaMetClasses.DataLayer.Conexion.ConnectionString, GLOBAL_Empresa)
+            oCliente.CargaDatos(strURLGateway)
         End If
 
         dgResguardos.DataSource = Nothing
