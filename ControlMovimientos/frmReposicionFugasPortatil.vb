@@ -721,11 +721,11 @@ Public Class frmReposicionFugasPortatil
     Private Sub BuscarCliente()
         Cursor = Cursors.WaitCursor
         Dim oCliente As PortatilClasses.Consulta.cCliente
-
         Try
             Dim corporativo As Integer = CInt(cboCorporativo.SelectedValue)
-
             oCliente = New PortatilClasses.Consulta.cCliente(0, CType(txtCliente.Text, Integer), corporativo)
+            oCliente.CadenaConexion = GLOBAL_ConString
+            oCliente.Modulo = CByte(GLOBAL_Modulo)
             Dim oConfig As New SigaMetClasses.cConfig(GLOBAL_Modulo, CShort(GLOBAL_Empresa), GLOBAL_Sucursal)
             Dim strURLGateway As String = CType(oConfig.Parametros("URLGateway"), String).Trim
 
@@ -738,7 +738,7 @@ Public Class frmReposicionFugasPortatil
                     Throw New Exception(Mensajes.Mensaje)
                 End If
 
-                oCliente.CargaDatos(strURLGateway, CByte(GLOBAL_Modulo))
+                oCliente.CargaDatos(strURLGateway)
             End If
 
             If oCliente.Cliente <> "" Then

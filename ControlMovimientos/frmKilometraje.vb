@@ -327,11 +327,12 @@ Public Class frmKilometraje
 
         Dim oConfig As New SigaMetClasses.cConfig(GLOBAL_Modulo, CShort(GLOBAL_Empresa), GLOBAL_Sucursal)
         Dim strURLGateway As String = CType(oConfig.Parametros("URLGateway"), String).Trim
-
+        oCamion.CadenaConexion = GLOBAL_ConString
+        oCamion.Modulo = CByte(GLOBAL_Modulo)
         If strURLGateway = "" Then
             oCamion.CargarDatos(CType(txtCamion.Text, Integer))
         Else
-            oCamion.CargarDatos(CType(txtCamion.Text, Integer), strURLGateway, CByte(GLOBAL_Modulo))
+            oCamion.CargarDatos(CType(txtCamion.Text, Integer), strURLGateway)
         End If
 
         If oCamion.Identificador = 0 Then

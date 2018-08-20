@@ -192,7 +192,7 @@
     </Reference>
     <Reference Include="PortatilClasses, Version=1.7.0.4, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\PortatilClasses.dll</HintPath>
+      <HintPath>..\..\SigametLibrerias\PortatilClasses\bin\PortatilClasses.dll</HintPath>
     </Reference>
     <Reference Include="ReporteDinamico, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
