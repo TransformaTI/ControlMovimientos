@@ -15,6 +15,8 @@
 'Motivo: Se agrego una operacio
 'Identificador: 20060302CAGP$001
 
+Imports SigaMetClasses
+
 Public Class frmPrincipal
     Inherits System.Windows.Forms.Form
 
@@ -1538,7 +1540,9 @@ Public Class frmPrincipal
         If GLOBAL_EmpresaComisionista = "1" Then
             mnuComisionista.Visible = True
         End If
-        If UCase$(GLOBAL_BaseDatos) = "SIGAMETDEVTB" Then
+        Dim oConfig As New SigaMetClasses.cConfig(GLOBAL_Modulo, CShort(GLOBAL_Empresa), GLOBAL_Sucursal)
+        Dim Liquidacion As String = CType(oConfig.Parametros("LiquidacionPortail"), String).Trim
+        If Liquidacion.Trim = "1" Then
             mnuReposicionFugas.Enabled = False
         End If
         mnuConfiguracion.Visible = GLOBAL_ComConfiguracion
