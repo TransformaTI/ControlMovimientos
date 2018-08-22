@@ -1538,7 +1538,7 @@ Public Class frmPrincipal
         If GLOBAL_EmpresaComisionista = "1" Then
             mnuComisionista.Visible = True
         End If
-        If GLOBAL_BaseDatos = "SIGAMETDEVTB" Then
+        If UCase$(GLOBAL_BaseDatos) = "SIGAMETDEVTB" Then
             mnuReposicionFugas.Enabled = False
         End If
         mnuConfiguracion.Visible = GLOBAL_ComConfiguracion
