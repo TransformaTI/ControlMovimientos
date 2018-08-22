@@ -338,7 +338,13 @@ Public Class frmKilometraje
         If oCamion.Identificador = 0 Then
             ActiveControl = txtCamion
             Dim Mensajes As New PortatilClasses.Mensaje(97, txtCamion.Text)
-            MessageBox.Show(Mensajes.Mensaje, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Dim Mensaje As New PortatilClasses.Mensaje(3, txtCamion.Text)
+            If cboTipo.SelectedIndex = 0 Then
+                MessageBox.Show(Mensajes.Mensaje, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            ElseIf cboTipo.SelectedIndex = 1 Then
+                MessageBox.Show(Mensaje.Mensaje, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            End If
             txtCamion.Clear()
         Else
             txtCamion.Tag = oCamion.Identificador
