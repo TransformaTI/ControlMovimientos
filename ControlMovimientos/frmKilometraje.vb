@@ -343,9 +343,10 @@ Public Class frmKilometraje
                 MessageBox.Show(Mensajes.Mensaje, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
             ElseIf cboTipo.SelectedIndex = 1 Then
                 MessageBox.Show(Mensaje.Mensaje, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
-
             End If
             txtCamion.Clear()
+            lblCliente.Text = ""
+            txtKmInicial.Clear()
         Else
             txtCamion.Tag = oCamion.Identificador
             lblCliente.Text = oCamion.Descripcion
