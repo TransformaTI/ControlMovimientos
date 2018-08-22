@@ -1541,8 +1541,8 @@ Public Class frmPrincipal
             mnuComisionista.Visible = True
         End If
         Dim oConfig As New SigaMetClasses.cConfig(GLOBAL_Modulo, CShort(GLOBAL_Empresa), GLOBAL_Sucursal)
-        Dim Liquidacion As String = CType(oConfig.Parametros("LiquidacionPortail"), String).Trim
-        If Liquidacion.Trim = "1" Then
+        Dim Liquidacion As Integer = CType(oConfig.Parametros("LiquidacionPortail"), Integer)
+        If Liquidacion <> 1 Then
             mnuReposicionFugas.Enabled = False
         End If
         mnuConfiguracion.Visible = GLOBAL_ComConfiguracion
