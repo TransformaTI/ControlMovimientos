@@ -664,7 +664,7 @@ Public Class frmPrincipal
         Me.ToolBar1.Location = New System.Drawing.Point(0, 0)
         Me.ToolBar1.Name = "ToolBar1"
         Me.ToolBar1.ShowToolTips = True
-        Me.ToolBar1.Size = New System.Drawing.Size(930, 49)
+        Me.ToolBar1.Size = New System.Drawing.Size(930, 50)
         Me.ToolBar1.TabIndex = 22
         '
         'tbbEntradas
@@ -1223,8 +1223,8 @@ Public Class frmPrincipal
     ' solo carga las fechas para que el usuario pueda seleccionar el rango de fecha y enseguida consulte el
     ' kardex
     Private Sub MostrarReporte(ByVal AlmacenGas As String)
-        Dim oReporte As New ReporteDinamicoOaxaca.frmReporteFechas(GLOBAL_RutaReportes, GLOBAL_Servidor, _
-                            GLOBAL_BaseDatos, GLOBAL_Usuario, GLOBAL_Password, _
+        Dim oReporte As New ReporteDinamicoOaxaca.frmReporteFechas(GLOBAL_RutaReportes, GLOBAL_Servidor,
+                            GLOBAL_BaseDatos, GLOBAL_Usuario, GLOBAL_Password,
                             "ReporteKardex.rpt")
         oReporte.AddParametros(AlmacenGas, False)
         oReporte.AddParametros("FechaInicial", True)
@@ -1237,8 +1237,8 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub MostrarReporteTeorico()
-        Dim oReporte As New ReporteDinamicoOaxaca.frmReporteFechas(GLOBAL_RutaReportes, GLOBAL_Servidor, _
-                            GLOBAL_BaseDatos, GLOBAL_Usuario, GLOBAL_Password, _
+        Dim oReporte As New ReporteDinamicoOaxaca.frmReporteFechas(GLOBAL_RutaReportes, GLOBAL_Servidor,
+                            GLOBAL_BaseDatos, GLOBAL_Usuario, GLOBAL_Password,
                             "ReporteContable.rpt")
         oReporte.AddParametros("0", False)
         oReporte.AddParametros("FechaInicial", True)
@@ -1538,6 +1538,9 @@ Public Class frmPrincipal
         If GLOBAL_EmpresaComisionista = "1" Then
             mnuComisionista.Visible = True
         End If
+        If GLOBAL_BaseDatos = "SIGAMETDEVTB" Then
+            mnuReposicionFugas.Enabled = False
+        End If
         mnuConfiguracion.Visible = GLOBAL_ComConfiguracion
         mnuComisiones.Visible = GLOBAL_ComConsultarComisiones
         mnuImportar.Visible = GLOBAL_ImportarVtas
@@ -1565,7 +1568,7 @@ Public Class frmPrincipal
     End Sub
 
     ' Muestra los reportes que pertenecen al modulo 16, portatil
-    Private Sub mnuReportes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuReportes.Click                       
+    Private Sub mnuReportes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuReportes.Click
         Dim oReporte As New ReporteDinamico.frmListaReporte(GLOBAL_Modulo, GLOBAL_RutaReportes, GLOBAL_Servidor, GLOBAL_BaseDatos, GLOBAL_Usuario, GLOBAL_Conexion, GLOBAL_Empresa, GLOBAL_Sucursal, GLOBAL_SeguridadReportes)
         oReporte.Show()
     End Sub
@@ -1897,7 +1900,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub MenuItem2_Click_1(sender As System.Object, e As System.EventArgs)
-        Dim oReporte As New ReporteDinamicoOaxaca.frmReporte("\\192.168.1.21\SigametReportesW7\Inventario", "ReporteLiquidacionComision.rpt", "192.168.1.27", _
+        Dim oReporte As New ReporteDinamicoOaxaca.frmReporte("\\192.168.1.21\SigametReportesW7\Inventario", "ReporteLiquidacionComision.rpt", "192.168.1.27",
                "Sigamet", "SIGAREP", "SIGAREP", False)
         oReporte.ListaParametros.Add(8)
         oReporte.ListaParametros.Add(677522)
