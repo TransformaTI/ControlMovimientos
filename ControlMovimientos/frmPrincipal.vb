@@ -1540,11 +1540,15 @@ Public Class frmPrincipal
         If GLOBAL_EmpresaComisionista = "1" Then
             mnuComisionista.Visible = True
         End If
-        Dim oConfig As New SigaMetClasses.cConfig(GLOBAL_Modulo, CShort(GLOBAL_Empresa), GLOBAL_Sucursal)
-        Dim Liquidacion As Integer = CType(oConfig.Parametros("LiquidacionPortail"), Integer)
-        If Liquidacion <> 1 Then
-            mnuReposicionFugas.Enabled = False
-        End If
+        Try
+            Dim oConfig As New SigaMetClasses.cConfig(GLOBAL_Modulo, CShort(GLOBAL_Empresa), GLOBAL_Sucursal)
+            Dim inabilitar As Integer = CType(oConfig.Parametros("LiquidacionPortail"), Integer)
+            If inabilitar <> 1 Then
+                mnuReposicionFugas.Enabled = False
+            End If
+        Catch ex As Exception
+            MessageBox.Show("No contiene valor el parametro LiquidacionPortail.  " & ex.Message, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
         mnuConfiguracion.Visible = GLOBAL_ComConfiguracion
         mnuComisiones.Visible = GLOBAL_ComConsultarComisiones
         mnuImportar.Visible = GLOBAL_ImportarVtas
