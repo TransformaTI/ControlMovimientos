@@ -327,18 +327,26 @@ Public Class frmKilometraje
 
         Dim oConfig As New SigaMetClasses.cConfig(GLOBAL_Modulo, CShort(GLOBAL_Empresa), GLOBAL_Sucursal)
         Dim strURLGateway As String = CType(oConfig.Parametros("URLGateway"), String).Trim
-
+        oCamion.CadenaConexion = GLOBAL_ConString
+        oCamion.Modulo = CByte(GLOBAL_Modulo)
         If strURLGateway = "" Then
             oCamion.CargarDatos(CType(txtCamion.Text, Integer))
         Else
-            oCamion.CargarDatos(CType(txtCamion.Text, Integer), strURLGateway, CByte(GLOBAL_Modulo))
+            oCamion.CargarDatos(CType(txtCamion.Text, Integer), strURLGateway)
         End If
 
         If oCamion.Identificador = 0 Then
             ActiveControl = txtCamion
             Dim Mensajes As New PortatilClasses.Mensaje(97, txtCamion.Text)
-            MessageBox.Show(Mensajes.Mensaje, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Dim Mensaje As New PortatilClasses.Mensaje(3, txtCamion.Text)
+            If cboTipo.SelectedIndex = 0 Then
+                MessageBox.Show(Mensajes.Mensaje, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            ElseIf cboTipo.SelectedIndex = 1 Then
+                MessageBox.Show(Mensaje.Mensaje, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
             txtCamion.Clear()
+            lblCliente.Text = ""
+            txtKmInicial.Clear()
         Else
             txtCamion.Tag = oCamion.Identificador
             lblCliente.Text = oCamion.Descripcion

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SigaMetClasses
+</name>
+</assembly>
+<members>
+<member name="T:SigaMetClasses.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:SigaMetClasses.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:SigaMetClasses.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:SigaMetClasses.My.Resources.Resources.boton_guardar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="M:SigaMetClasses.frmConsultaIngresosSaldoAFavor.#ctor(System.String)">
+ <summary>
+ Constructor del formulario
+ </summary>
+ <param name="tipoUsuario">Puede ser CALIDAD, USCAP o CONSULTA</param>
+</member>
+<member name="M:SigaMetClasses.frmConsultaIngresosSaldoAFavor.BuscarActualizar(System.Boolean)">
+ <summary>
+ Busca o actualiza los datos del grid. Si el parámetro actualizar
+ es verdadero no se cambia el título
+ </summary>
+ <param name="actualizar"></param>
+</member>
+<member name="M:SigaMetClasses.frmConsultaIngresosSaldoAFavor.ConmutarDatePickers(System.Boolean)">
+ <summary>
+ Habilita o deshabilita los controles de fechas
+ </summary>
+ <param name="habilitado"></param>
+</member>
+<member name="M:SigaMetClasses.frmConsultaIngresosSaldoAFavor.ConmutarBtnAccion(System.Boolean)">
+ <summary>
+ Habilita o deshabilita el botón de acción
+ </summary>
+ <param name="habilitado"></param>
+</member>
+<member name="M:SigaMetClasses.frmConsultaIngresosSaldoAFavor.Aplicar">
+ <summary>
+ Actualiza el estatus de REGISTRADO a PENDIENTE 
+ en los registros seleccionados
+ </summary>
+</member>
+<member name="M:SigaMetClasses.frmConsultaIngresosSaldoAFavor.Validar">
+ <summary>
+ Actualiza el estatus de PENDIENTE a REGISTRADO y
+ el TipoMovimiento de 4 a 1 en los registros seleccionados
+ </summary>
+</member>
+<member name="M:SigaMetClasses.frmConsultaIngresosSaldoAFavor.DeshabilitarCheckBox(System.Windows.Forms.DataGridViewCheckBoxCell,System.String)">
+ <summary>
+ Deshabilita los CheckBox del grid dependiendo de las acciones que 
+ puede realizar cada tipo de usuario
+ </summary>
+ <param name="cellCheckBox"></param>
+ <param name="estatus"></param>
+</member>
+<member name="M:SigaMetClasses.Precio.calcularImporte(System.Decimal)">
+ 
+ <param name="Litros"></param>
+</member>
+<member name="M:SigaMetClasses.Precio.calcularLitros(System.Decimal)">
+ 
+ <param name="Importe"></param>
+</member>
+<member name="M:SigaMetClasses.Anticpo.ConsultaPagosAnticipados(System.Int32)">
+ <summary>
+ Consulta Pagos Anticipados
+ </summary> 
+</member>
+</members>
+</doc>
