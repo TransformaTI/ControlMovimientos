@@ -332,6 +332,8 @@ Public Class frmKilometraje
         If strURLGateway = "" Then
             oCamion.CargarDatos(CType(txtCamion.Text, Integer))
         Else
+            oCamion.Modulo = GLOBAL_Modulo
+            oCamion.cadenaConexion = GLOBAL_ConString
             oCamion.CargarDatos(CType(txtCamion.Text, Integer), strURLGateway)
         End If
 

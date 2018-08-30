@@ -552,6 +552,8 @@ Public Class frmMovimientoResguardoSalida
         If strURLGateway = "" Then
             oCliente.CargaDatos()
         Else
+            oCliente.Modulo = GLOBAL_Modulo
+            oCliente.cadenaConexion = GLOBAL_ConString
             oCliente.CargaDatos(strURLGateway)
         End If
 
